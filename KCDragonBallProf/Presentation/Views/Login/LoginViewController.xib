@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="KCDragonBallProf" customModuleProvider="target">
             <connections>
+                <outlet property="passwordTextField" destination="cFA-l3-hwX" id="SZS-qi-aEa"/>
+                <outlet property="userTextField" destination="07Z-6f-c6t" id="sPZ-hB-9GX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,6 +56,9 @@
                             <rect key="frame" x="0.0" y="172.66666666666663" width="345" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            <connections>
+                                <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="jlz-Sx-y6a"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

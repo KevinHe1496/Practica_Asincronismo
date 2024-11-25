@@ -13,6 +13,19 @@
 		C96A91862CEE9BB4001F03DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A917E2CEE9BB4001F03DB /* SceneDelegate.swift */; };
 		C97B79FA2CF500940025FA33 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97B79F92CF500940025FA33 /* LoginViewController.xib */; };
 		C97B79FB2CF500940025FA33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B79F82CF500940025FA33 /* LoginViewController.swift */; };
+		C97B79FD2CF507550025FA33 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B79FC2CF507550025FA33 /* AppState.swift */; };
+		C97B79FF2CF507C50025FA33 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B79FE2CF507C50025FA33 /* LoginUseCase.swift */; };
+		C97B7A012CF507E70025FA33 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A002CF507E70025FA33 /* LoginRepositoryProtocol.swift */; };
+		C97B7A032CF508880025FA33 /* LoginUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A022CF508880025FA33 /* LoginUseCaseProtocol.swift */; };
+		C97B7A052CF508F50025FA33 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A042CF508F50025FA33 /* EndPoints.swift */; };
+		C97B7A072CF509360025FA33 /* HTTPReponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A062CF509360025FA33 /* HTTPReponseCodes.swift */; };
+		C97B7A092CF5096E0025FA33 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A082CF5096E0025FA33 /* HTTPMethods.swift */; };
+		C97B7A0C2CF50A130025FA33 /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A0B2CF50A130025FA33 /* ConstantsApp.swift */; };
+		C97B7A0E2CF50A960025FA33 /* NetworkLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A0D2CF50A960025FA33 /* NetworkLogin.swift */; };
+		C97B7A112CF510B30025FA33 /* NetworkLoginFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A102CF510B30025FA33 /* NetworkLoginFake.swift */; };
+		C97B7A132CF510F40025FA33 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A122CF510F40025FA33 /* LoginRepository.swift */; };
+		C97B7A152CF5116D0025FA33 /* LoginRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A142CF5116D0025FA33 /* LoginRepositoryFake.swift */; };
+		C97B7A182CF513CE0025FA33 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C97B7A172CF513CE0025FA33 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +56,18 @@
 		C96A917E2CEE9BB4001F03DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C97B79F82CF500940025FA33 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C97B79F92CF500940025FA33 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C97B79FC2CF507550025FA33 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C97B79FE2CF507C50025FA33 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		C97B7A002CF507E70025FA33 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C97B7A022CF508880025FA33 /* LoginUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseProtocol.swift; sourceTree = "<group>"; };
+		C97B7A042CF508F50025FA33 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		C97B7A062CF509360025FA33 /* HTTPReponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReponseCodes.swift; sourceTree = "<group>"; };
+		C97B7A082CF5096E0025FA33 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		C97B7A0B2CF50A130025FA33 /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
+		C97B7A0D2CF50A960025FA33 /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
+		C97B7A102CF510B30025FA33 /* NetworkLoginFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoginFake.swift; sourceTree = "<group>"; };
+		C97B7A122CF510F40025FA33 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		C97B7A142CF5116D0025FA33 /* LoginRepositoryFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryFake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97B7A182CF513CE0025FA33 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +132,7 @@
 		C96A91802CEE9BB4001F03DB /* KCDragonBallProf */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A0F2CF510180025FA33 /* PreviewContent */,
 				C96A91882CEE9BC6001F03DB /* Presentation */,
 				C96A91892CEE9BCF001F03DB /* Domain */,
 				C96A918A2CEE9BD4001F03DB /* Data */,
@@ -152,6 +179,7 @@
 		C96A918B2CEE9CAB001F03DB /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A0B2CF50A130025FA33 /* ConstantsApp.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -167,6 +195,7 @@
 		C96A918D2CEE9CB7001F03DB /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A122CF510F40025FA33 /* LoginRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -174,6 +203,10 @@
 		C96A918E2CEE9CC1001F03DB /* BaseNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A042CF508F50025FA33 /* EndPoints.swift */,
+				C97B7A062CF509360025FA33 /* HTTPReponseCodes.swift */,
+				C97B7A082CF5096E0025FA33 /* HTTPMethods.swift */,
+				C97B7A0D2CF50A960025FA33 /* NetworkLogin.swift */,
 			);
 			path = BaseNetwork;
 			sourceTree = "<group>";
@@ -181,6 +214,8 @@
 		C96A918F2CEE9D04001F03DB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A002CF507E70025FA33 /* LoginRepositoryProtocol.swift */,
+				C97B7A022CF508880025FA33 /* LoginUseCaseProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -202,6 +237,7 @@
 		C96A91922CEE9D20001F03DB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				C97B79FE2CF507C50025FA33 /* LoginUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -226,6 +262,7 @@
 		C96A91952CEE9D43001F03DB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C97B79FC2CF507550025FA33 /* AppState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -253,6 +290,15 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		C97B7A0F2CF510180025FA33 /* PreviewContent */ = {
+			isa = PBXGroup;
+			children = (
+				C97B7A102CF510B30025FA33 /* NetworkLoginFake.swift */,
+				C97B7A142CF5116D0025FA33 /* LoginRepositoryFake.swift */,
+			);
+			path = PreviewContent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +316,7 @@
 			);
 			name = KCDragonBallProf;
 			packageProductDependencies = (
+				C97B7A172CF513CE0025FA33 /* KeychainSwift */,
 			);
 			productName = KCDragonBallProf;
 			productReference = C96A913E2CEE9706001F03DB /* KCDragonBallProf.app */;
@@ -353,6 +400,9 @@
 			);
 			mainGroup = C96A91352CEE9706001F03DB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C97B7A162CF513CE0025FA33 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C96A913F2CEE9706001F03DB /* Products */;
 			projectDirPath = "";
@@ -397,9 +447,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97B7A0E2CF50A960025FA33 /* NetworkLogin.swift in Sources */,
+				C97B7A092CF5096E0025FA33 /* HTTPMethods.swift in Sources */,
+				C97B7A032CF508880025FA33 /* LoginUseCaseProtocol.swift in Sources */,
+				C97B7A132CF510F40025FA33 /* LoginRepository.swift in Sources */,
 				C97B79FB2CF500940025FA33 /* LoginViewController.swift in Sources */,
+				C97B7A072CF509360025FA33 /* HTTPReponseCodes.swift in Sources */,
 				C96A91852CEE9BB4001F03DB /* AppDelegate.swift in Sources */,
+				C97B7A0C2CF50A130025FA33 /* ConstantsApp.swift in Sources */,
 				C96A91862CEE9BB4001F03DB /* SceneDelegate.swift in Sources */,
+				C97B79FD2CF507550025FA33 /* AppState.swift in Sources */,
+				C97B79FF2CF507C50025FA33 /* LoginUseCase.swift in Sources */,
+				C97B7A112CF510B30025FA33 /* NetworkLoginFake.swift in Sources */,
+				C97B7A052CF508F50025FA33 /* EndPoints.swift in Sources */,
+				C97B7A012CF507E70025FA33 /* LoginRepositoryProtocol.swift in Sources */,
+				C97B7A152CF5116D0025FA33 /* LoginRepositoryFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = KCDragonBallProf/PreviewContent;
 				DEVELOPMENT_TEAM = F7BUD43D47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KCDragonBallProf/Info.plist;
@@ -483,6 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = KCDragonBallProf/PreviewContent;
 				DEVELOPMENT_TEAM = F7BUD43D47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KCDragonBallProf/Info.plist;
@@ -739,6 +803,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C97B7A162CF513CE0025FA33 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C97B7A172CF513CE0025FA33 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C97B7A162CF513CE0025FA33 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C96A91362CEE9706001F03DB /* Project object */;
 }
