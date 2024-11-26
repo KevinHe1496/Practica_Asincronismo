@@ -26,6 +26,11 @@
 		C97B7A132CF510F40025FA33 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A122CF510F40025FA33 /* LoginRepository.swift */; };
 		C97B7A152CF5116D0025FA33 /* LoginRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A142CF5116D0025FA33 /* LoginRepositoryFake.swift */; };
 		C97B7A182CF513CE0025FA33 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C97B7A172CF513CE0025FA33 /* KeychainSwift */; };
+		C97B7A1B2CF524F60025FA33 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C97B7A1A2CF524F60025FA33 /* CombineCocoa */; };
+		C97B7A1E2CF539780025FA33 /* HeroesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97B7A1D2CF539780025FA33 /* HeroesListViewController.xib */; };
+		C97B7A1F2CF539780025FA33 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A1C2CF539780025FA33 /* HeroesListViewController.swift */; };
+		C97B7A222CF539810025FA33 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97B7A212CF539810025FA33 /* ErrorViewController.xib */; };
+		C97B7A232CF539810025FA33 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A202CF539810025FA33 /* ErrorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,10 @@
 		C97B7A102CF510B30025FA33 /* NetworkLoginFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoginFake.swift; sourceTree = "<group>"; };
 		C97B7A122CF510F40025FA33 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		C97B7A142CF5116D0025FA33 /* LoginRepositoryFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryFake.swift; sourceTree = "<group>"; };
+		C97B7A1C2CF539780025FA33 /* HeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewController.swift; sourceTree = "<group>"; };
+		C97B7A1D2CF539780025FA33 /* HeroesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesListViewController.xib; sourceTree = "<group>"; };
+		C97B7A202CF539810025FA33 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		C97B7A212CF539810025FA33 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -88,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97B7A1B2CF524F60025FA33 /* CombineCocoa in Frameworks */,
 				C97B7A182CF513CE0025FA33 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +289,8 @@
 		C96A91972CEE9D58001F03DB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A1C2CF539780025FA33 /* HeroesListViewController.swift */,
+				C97B7A1D2CF539780025FA33 /* HeroesListViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -286,6 +298,8 @@
 		C96A91982CEE9D5D001F03DB /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				C97B7A202CF539810025FA33 /* ErrorViewController.swift */,
+				C97B7A212CF539810025FA33 /* ErrorViewController.xib */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -317,6 +331,7 @@
 			name = KCDragonBallProf;
 			packageProductDependencies = (
 				C97B7A172CF513CE0025FA33 /* KeychainSwift */,
+				C97B7A1A2CF524F60025FA33 /* CombineCocoa */,
 			);
 			productName = KCDragonBallProf;
 			productReference = C96A913E2CEE9706001F03DB /* KCDragonBallProf.app */;
@@ -402,6 +417,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C97B7A162CF513CE0025FA33 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				C97B7A192CF524F60025FA33 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C96A913F2CEE9706001F03DB /* Products */;
@@ -422,6 +438,8 @@
 			files = (
 				C96A91812CEE9BB4001F03DB /* Assets.xcassets in Resources */,
 				C96A91832CEE9BB4001F03DB /* LaunchScreen.storyboard in Resources */,
+				C97B7A1E2CF539780025FA33 /* HeroesListViewController.xib in Resources */,
+				C97B7A222CF539810025FA33 /* ErrorViewController.xib in Resources */,
 				C97B79FA2CF500940025FA33 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,10 +475,12 @@
 				C97B7A0C2CF50A130025FA33 /* ConstantsApp.swift in Sources */,
 				C96A91862CEE9BB4001F03DB /* SceneDelegate.swift in Sources */,
 				C97B79FD2CF507550025FA33 /* AppState.swift in Sources */,
+				C97B7A1F2CF539780025FA33 /* HeroesListViewController.swift in Sources */,
 				C97B79FF2CF507C50025FA33 /* LoginUseCase.swift in Sources */,
 				C97B7A112CF510B30025FA33 /* NetworkLoginFake.swift in Sources */,
 				C97B7A052CF508F50025FA33 /* EndPoints.swift in Sources */,
 				C97B7A012CF507E70025FA33 /* LoginRepositoryProtocol.swift in Sources */,
+				C97B7A232CF539810025FA33 /* ErrorViewController.swift in Sources */,
 				C97B7A152CF5116D0025FA33 /* LoginRepositoryFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +833,14 @@
 				minimumVersion = 24.0.0;
 			};
 		};
+		C97B7A192CF524F60025FA33 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -820,6 +848,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C97B7A162CF513CE0025FA33 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		C97B7A1A2CF524F60025FA33 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C97B7A192CF524F60025FA33 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

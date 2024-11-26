@@ -6,18 +6,50 @@
 //
 
 import UIKit
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var appState: AppState = AppState()
+    var cancellable: AnyCancellable?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
-        self.window!.rootViewController = LoginViewController()
-        self.window!.makeKeyAndVisible()
+
+        
+        appState.validateControlLogin()
+        var navigationController: UINavigationController?
+        
+        self.cancellable = appState.$statusLogin
+            .sink(receiveValue: { state in
+                switch state {
+               
+                case .none:
+                    DispatchQueue.main.async {
+                        
+                        navigationController = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
+                        self.window!.rootViewController = navigationController
+                        self.window!.makeKeyAndVisible()
+                    }
+                case .success:
+                    DispatchQueue.main.async {
+                    
+                    }
+                case .error:
+                    print("Imprimir un error")
+                case .notValidate:
+                    DispatchQueue.main.async {
+                        print("Login")
+                        navigationController = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
+                        self.window!.rootViewController = navigationController
+                        self.window!.makeKeyAndVisible()
+                    }
+                }
+            })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

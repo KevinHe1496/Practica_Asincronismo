@@ -27,7 +27,7 @@ final class NetworkLogin: NetworkLoginProtocol {
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             if let resp = response as? HTTPURLResponse {
-                // el token llega como data y esto lo convierte en string
+                // el token llega como data y esto lo convierte en string osea nuestro token
                 tokenJWT = String(decoding: data, as: UTF8.self)
             }
         } catch {
