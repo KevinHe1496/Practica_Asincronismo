@@ -15,6 +15,14 @@ final class HeroesViewModel: ObservableObject {
     
     init(usecaseHeroes: HeroesUseCaseProtocol = HeroesUseCase()) {
         self.usecaseHeroes = usecaseHeroes
+        Task {
+            await getHeroes()
+        }
+    }
+    
+    
+    func viewDidLoad() {
+        
     }
     
     func getHeroes() async {

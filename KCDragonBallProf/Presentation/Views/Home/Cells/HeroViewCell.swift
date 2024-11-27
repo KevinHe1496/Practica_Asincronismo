@@ -11,6 +11,9 @@ class HeroViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    
+    static let identifier = String(describing: HeroViewCell.self)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
