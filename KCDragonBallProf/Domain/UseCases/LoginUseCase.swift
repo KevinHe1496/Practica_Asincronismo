@@ -38,7 +38,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
     }
     
     func validateToken() async -> Bool {
-        if KeychainSwift().get(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) != "" {
+        if KeychainSwift().get(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) != nil {
             return true
         } else {
             return false
@@ -69,5 +69,6 @@ final class LoginUseCaseFake: LoginUseCaseProtocol {
     func validateToken() async -> Bool {
         return true
     }
+
     
 }

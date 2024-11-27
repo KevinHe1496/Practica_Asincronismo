@@ -33,6 +33,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userTextField.placeholder = NSLocalizedString("Email", comment: "Email del usuario")
+        passwordTextField.placeholder = NSLocalizedString("Password", comment: "Password del usuario")
         bindingUI()
 
     }

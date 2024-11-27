@@ -36,3 +36,11 @@ final class NetworkLogin: NetworkLoginProtocol {
         return tokenJWT
     }
 }
+
+
+
+final class NetworkLoginFake: NetworkLoginProtocol {
+    func loginApp(user: String, password: String) async -> String {
+        return UUID().uuidString
+    }
+}

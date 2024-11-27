@@ -37,10 +37,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     }
                 case .success:
                     DispatchQueue.main.async {
-                    
+                        print("Heroes List")
+                        navigationController = UINavigationController(rootViewController: HeroesListViewController(appState: self.appState, viewModel: HeroesViewModel() ))
+                        self.window!.rootViewController = navigationController
+                        self.window!.makeKeyAndVisible()
                     }
                 case .error:
-                    print("Imprimir un error")
+                    
+                    DispatchQueue.main.async {
+                        print("Error al home")
+                        navigationController = UINavigationController(rootViewController: ErrorViewController(appState: self.appState, error: "Error en el login usuario/clave"))
+                        self.window!.rootViewController = navigationController
+                        self.window!.makeKeyAndVisible()
+                    }
+                    
                 case .notValidate:
                     DispatchQueue.main.async {
                         print("Login")

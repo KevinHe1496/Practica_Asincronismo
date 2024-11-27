@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  KCDragonBallProf
+
+  Created by Kevin Heredia on 26/11/24.
+  
+*/
+
+"Email" = "Correo electrónico";
+"Password" = "Clave";
+"Login" = "Entrar";
