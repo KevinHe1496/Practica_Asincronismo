@@ -5,6 +5,7 @@ final class TransformationsViewModel: ObservableObject {
     
     @Published var transformationsData = [TransformationModel]()
     
+    
     private var heroesId: HeroesModel
     private var transformationsUseCase: TransformationsUseCaseProtocol
     

@@ -28,7 +28,7 @@ class TransformationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: TransformationsViewCell.identifier, bundle: Bundle(for: type(of: self))), forCellReuseIdentifier: TransformationsViewCell.identifier)
-        self.title = viewModel.transformationsData.first?.name
+        self.title = "Transformaciones"
         self.bindingUI()
 
     }

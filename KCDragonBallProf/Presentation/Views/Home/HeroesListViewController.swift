@@ -84,6 +84,7 @@ extension HeroesListViewController {
 //        print("Hero seleccionado: \(hero)")
         
         
+        
         navigationController?.pushViewController(TransformationsViewController(appState: AppState(), viewModel: TransformationsViewModel(heroesId: hero)), animated: true)
         
         tableView.deselectRow(at: indexPath, animated: true)
