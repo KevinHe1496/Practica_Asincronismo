@@ -30,7 +30,7 @@ final class NetworkHeroes: NetworkHeroesProtocol {
         // Token
         let jwtToken = keyChain.get(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
         guard let tokenJWT = jwtToken else {
-            print("no sirvio obtener el token")
+            print("Token no Obtenido")
             return []
         }
         request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")

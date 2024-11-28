@@ -19,7 +19,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="413-wa-eI3">
                         <rect key="frame" x="16" y="16" width="291" height="50"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WWK-py-NhV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WWK-py-NhV">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="EtP-So-Owf"/>

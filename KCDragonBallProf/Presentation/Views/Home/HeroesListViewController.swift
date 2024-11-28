@@ -81,7 +81,12 @@ extension HeroesListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let hero = self.viewModel.herosData[indexPath.row]
-        print("Hero seleccionado: \(hero)")
+//        print("Hero seleccionado: \(hero)")
+        
+        
+        navigationController?.pushViewController(TransformationsViewController(appState: AppState(), viewModel: TransformationsViewModel(heroesId: hero)), animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
