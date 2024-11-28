@@ -1,6 +1,7 @@
 
 
 import Foundation
+import KeychainSwift
 
 protocol NetworkLoginProtocol {
     func loginApp(user: String, password: String) async -> String
@@ -21,7 +22,7 @@ final class NetworkLogin: NetworkLoginProtocol {
         }
         var request: URLRequest = URLRequest(url: url)
         request.httpMethod = HTTPMethods.post
-        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-Type")
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
         request.addValue(segCredential, forHTTPHeaderField: "Authorization")
         
         do {

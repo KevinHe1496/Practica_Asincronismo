@@ -14,6 +14,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
     
     
     var repo: LoginRepositoryProtocol
+    private let keyChain = KeychainSwift()
     
     
     init(repo: LoginRepositoryProtocol = DefaultLoginRepository(network: NetworkLogin())) {
@@ -23,22 +24,22 @@ final class LoginUseCase: LoginUseCaseProtocol {
     func loginApp(user: String, password: String) async -> Bool {
         let token = await repo.loginApp(user: user, password: password)
         
-        if token != "" {
-            KeychainSwift().set(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN, forKey: token)
+        if !token.isEmpty {
+            keyChain.set(token, forKey: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
             return true
         } else {
-            KeychainSwift().delete(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+            keyChain.delete(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
             return false
         }
         
     }
     
     func logout() async {
-        KeychainSwift().delete(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+        keyChain.delete(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
     }
     
     func validateToken() async -> Bool {
-        if KeychainSwift().get(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) != nil {
+        if keyChain.get(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) != nil {
             return true
         } else {
             return false
@@ -51,19 +52,19 @@ final class LoginUseCase: LoginUseCaseProtocol {
 final class LoginUseCaseFake: LoginUseCaseProtocol {
     
     var repo: LoginRepositoryProtocol
-    
+    private let keyChain = KeychainSwift()
     
     init(repo: LoginRepositoryProtocol = DefaultLoginRepository(network: NetworkLogin())) {
         self.repo = repo
     }
     
     func loginApp(user: String, password: String) async -> Bool {
-        KeychainSwift().set(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN, forKey: "LoginFakeSuccess")
+        keyChain.set(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN, forKey: "LoginFakeSuccess")
         
     }
     
     func logout() async {
-        KeychainSwift().delete(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+        keyChain.delete(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
     }
     
     func validateToken() async -> Bool {

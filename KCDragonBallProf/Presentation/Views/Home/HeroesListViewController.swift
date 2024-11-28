@@ -27,7 +27,7 @@ class HeroesListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: String(describing: HeroViewCell.identifier), bundle: Bundle(for: type(of: self))), forCellReuseIdentifier: HeroViewCell.identifier)
+        tableView.register(UINib(nibName: HeroViewCell.identifier, bundle: Bundle(for: type(of: self))), forCellReuseIdentifier: HeroViewCell.identifier)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeSession))
         self.title = "Lista de Heroes"
         self.bindingUI()
@@ -86,5 +86,5 @@ extension HeroesListViewController {
 }
 
 #Preview {
-    HeroesListViewController(appState: AppState(loginUseCase: LoginUseCaseFake()), viewModel: HeroesViewModel(usecaseHeroes: HeroesUseCaseFake()))
+    HeroesListViewController(appState: AppState(loginUseCase: LoginUseCase()), viewModel: HeroesViewModel(usecaseHeroes: HeroesUseCase()))
 }

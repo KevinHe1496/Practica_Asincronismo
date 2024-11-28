@@ -9,6 +9,7 @@ import UIKit
 import Combine
 import CombineCocoa
 
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var userTextField: UITextField!
@@ -63,6 +64,18 @@ class LoginViewController: UIViewController {
                 }.store(in: &subscriptions)
         }
         
+        if let passwordTextField = self.passwordTextField {
+            passwordTextField.textPublisher
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] passwordText in
+                    if let password = passwordText {
+                        print("Text password: \(password)")
+                        self?.pass = password
+                    }
+                }
+                .store(in: &subscriptions)
+        }
+        
         if let button = self.loginButton {
             button.tapPublisher
                 .receive(on: DispatchQueue.main)
@@ -70,6 +83,7 @@ class LoginViewController: UIViewController {
                     if let user = self?.user,
                        let pass = self?.pass {
                         self?.appState?.loginApp(user: user, pass: pass)
+                        
                     }
                 }.store(in: &subscriptions)
         }
