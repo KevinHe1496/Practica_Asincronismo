@@ -7,11 +7,11 @@ final class TransformationsViewModel: ObservableObject {
     
     
     private var heroesId: HeroesModel
-    private var transformationsUseCase: TransformationsUseCaseProtocol
+    private var usecaseTransformation: TransformationsUseCaseProtocol
     
     init(heroesId: HeroesModel, transformationsUseCase: TransformationsUseCaseProtocol = TransformationsUseCase()) {
         self.heroesId = heroesId
-        self.transformationsUseCase = transformationsUseCase
+        self.usecaseTransformation = transformationsUseCase
         Task {
             await getTransformations()
         }
@@ -23,7 +23,7 @@ final class TransformationsViewModel: ObservableObject {
     
     
     func getTransformations() async {
-        let data = await transformationsUseCase.getTransformation(id: heroesId.id.uuidString)
+        let data = await usecaseTransformation.getTransformation(id: heroesId.id.uuidString)
         DispatchQueue.main.async {
             self.transformationsData = data
         }

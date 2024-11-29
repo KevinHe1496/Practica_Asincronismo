@@ -28,7 +28,7 @@ final class TransformationsRepositoryFake: TransformationsRepositoryProtocol {
     
     private var network: NetworkTransformationsProtocol
     
-    init(network: NetworkTransformationsProtocol) {
+    init(network: NetworkTransformationsProtocol = NetworkTransformationsFake()) {
         self.network = network
     }
     

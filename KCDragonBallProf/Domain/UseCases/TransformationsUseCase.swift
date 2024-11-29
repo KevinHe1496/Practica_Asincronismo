@@ -37,7 +37,7 @@ final class TransformationsUseCaseFake: TransformationsUseCaseProtocol {
     
     var repo: TransformationsRepositoryProtocol
     
-    init(repo: TransformationsRepositoryProtocol = TransformationsRepository(network: NetworkTransformations())) {
+    init(repo: TransformationsRepositoryProtocol = TransformationsRepository(network: NetworkTransformationsFake())) {
         self.repo = repo
     }
     
