@@ -117,6 +117,34 @@ final class LoginAndKeychainTests: XCTestCase {
 
     }
     
-   
+    func testUILoginView() throws {
+        
+        XCTAssertNoThrow(LoginViewController(appState: AppState()))
+        let view = LoginViewController(appState: AppState())
+        XCTAssertNotNil(view)
+        
+        guard let txtUser = view.userTextField else {
+            return
+        }
+        XCTAssertNotNil(txtUser)
+        
+        guard let txtPass = view.passwordTextField else {
+            return
+        }
+        XCTAssertNotNil(txtPass)
+        
+        guard let button = view.loginButton else {
+            return
+        }
+        XCTAssertNotNil(button)
+        
+        
+        XCTAssertEqual(txtUser.placeholder, "E-mail")
+        XCTAssertEqual(txtPass.placeholder, "Password")
+        XCTAssertEqual(button.titleLabel?.text, "Login")
+        
+    }
+    
+    
     
 }
