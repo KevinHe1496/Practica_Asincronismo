@@ -91,6 +91,3 @@ extension HeroesListViewController {
     }
 }
 
-#Preview {
-    HeroesListViewController(appState: AppState(loginUseCase: LoginUseCase()), viewModel: HeroesViewModel(usecaseHeroes: HeroesUseCase()))
-}

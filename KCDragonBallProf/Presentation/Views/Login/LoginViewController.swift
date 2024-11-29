@@ -36,8 +36,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         userTextField.placeholder = NSLocalizedString("Email", comment: "Email del usuario")
         passwordTextField.placeholder = NSLocalizedString("Password", comment: "Password del usuario")
+        userTextField.keyboardType = .emailAddress
         bindingUI()
-
     }
 
     @IBAction func loginButton(_ sender: Any) {
@@ -88,5 +88,6 @@ class LoginViewController: UIViewController {
                 }.store(in: &subscriptions)
         }
     }
-    
 }
+
+
