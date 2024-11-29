@@ -1,10 +1,3 @@
-//
-//  TransformationsViewController.swift
-//  KCDragonBallProf
-//
-//  Created by Kevin Heredia on 28/11/24.
-//
-
 import UIKit
 import Combine
 import CombineCocoa
@@ -14,6 +7,8 @@ class TransformationsViewController: UITableViewController {
     private var appState: AppState?
     private var viewModel: TransformationsViewModel
     var suscriptors = Set<AnyCancellable>()
+    
+    private var isAlertPresented = false  // Controlar si la alerta se ha mostrado
     
     init(appState: AppState, viewModel: TransformationsViewModel) {
         self.appState = appState
@@ -30,25 +25,48 @@ class TransformationsViewController: UITableViewController {
         tableView.register(UINib(nibName: TransformationsViewCell.identifier, bundle: Bundle(for: type(of: self))), forCellReuseIdentifier: TransformationsViewCell.identifier)
         self.title = "Transformaciones"
         self.bindingUI()
-
     }
 
     private func bindingUI() {
+        // Observamos el estado de isLoading y transformationsData
         self.viewModel.$transformationsData
+            .combineLatest(self.viewModel.$isLoading)
             .receive(on: DispatchQueue.main)
-            .sink { transformations in
-                self.tableView.reloadData()
+            .sink { [weak self] transformations, isLoading in
+                guard let self = self else { return }
+                
+                if !isLoading {  // Si los datos ya se cargaron
+                    if transformations.isEmpty && !self.isAlertPresented {
+                        self.isAlertPresented = true
+                        
+                        // Mostrar la alerta si la lista está vacía
+                        let alert = UIAlertController(title: "No hay transformaciones",
+                                                      message: "Actualmente no hay transformaciones disponibles para este héroe.",
+                                                      preferredStyle: .alert)
+                        
+                        let action = UIAlertAction(title: "OK", style: .default) { _ in
+                            self.isAlertPresented = false
+                            
+                            // Volver a la vista anterior cuando se presiona "OK"
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        
+                        alert.addAction(action)
+                        self.present(alert, animated: true, completion: nil)
+                    } else {
+                        // Recargar la tabla si hay datos
+                        self.tableView.reloadData()
+                    }
+                }
             }
             .store(in: &suscriptors)
     }
-    
 }
 
 extension TransformationsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.transformationsData.count
