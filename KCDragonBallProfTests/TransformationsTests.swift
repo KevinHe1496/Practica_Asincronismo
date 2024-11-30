@@ -13,9 +13,10 @@ import UIKit
 @testable import KCDragonBallProf
 
 final class TransformationsTests: XCTestCase {
+
     
     override func setUpWithError() throws {
-        
+
     }
     
     override func tearDownWithError() throws {
@@ -132,5 +133,21 @@ final class TransformationsTests: XCTestCase {
     }
     
     
+    
+    func testLoadTransformationsError() async {
+        // Given
+        let hero = HeroesModel(id: UUID(uuidString: "D88BE50B-913D-4EA8-AC42-04D3AF1434E3")!, favorite: false, description: "description", photo: "photo", name: "krilin")
+        let repository = TransformationsRepositoryFake()
+        let viewModel = TransformationsViewModel(heroesId: hero, transformationsUseCase: TransformationsUseCaseFakeError(repo: repository))
+        
+        XCTAssertNotNil(viewModel)
+        
+        // When
+        let transformations = viewModel.transformationsData
+        
+        // Then
+        XCTAssertTrue(transformations.isEmpty, "Se esperaba que la lista de transformaciones estuviera vacía.")
+    }
+
     
 }

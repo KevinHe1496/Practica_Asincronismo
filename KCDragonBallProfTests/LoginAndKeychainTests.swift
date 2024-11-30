@@ -13,15 +13,15 @@ import UIKit
 @testable import KCDragonBallProf
 
 final class LoginAndKeychainTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testKeyChainLibrary() throws {
         let keyChain = KeychainSwift()
         XCTAssertNotNil(keyChain)
@@ -38,6 +38,24 @@ final class LoginAndKeychainTests: XCTestCase {
         
         XCTAssertNoThrow(keyChain.delete("Test"))
     }
+    
+    func testKeyChainLibraryError() throws {
+        let keyChain = KeychainSwift()
+        XCTAssertNotNil(keyChain)
+        
+        // Guardar un valor en el Keychain
+        let save = keyChain.set("Test", forKey: "key123")
+        XCTAssertTrue(save, "El valor no se guardó correctamente en el Keychain")
+        
+        // Recuperar el valor guardado
+        let value = keyChain.get("key123")
+        XCTAssertNotNil(value, "No se pudo obtener el valor del Keychain")
+        XCTAssertEqual(value, "Test", "El valor recuperado no coincide con el valor esperado")
+        
+        // Asegurarse de que un valor incorrecto no pase la validación
+        XCTAssertNotEqual(value, "Teest", "El valor no debería coincidir con uno incorrecto")
+    }
+    
     
     func testLoginFake() async throws {
         let keyChain = KeychainSwift()
@@ -61,7 +79,7 @@ final class LoginAndKeychainTests: XCTestCase {
         jwt = keyChain.get(ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
         XCTAssertEqual(jwt, nil)
     }
-
+    
     func testLoginReal() async throws {
         let keyChain = KeychainSwift()
         XCTAssertNotNil(keyChain)
@@ -90,6 +108,19 @@ final class LoginAndKeychainTests: XCTestCase {
     }
     
     
+    
+    func testLoginErrorMessage() async {
+        //Give
+        let loginRepository = LoginRepositoryFakeError()
+        
+        //When
+        let result = await loginRepository.loginApp(user: "", password: "")
+        
+        // Then
+        XCTAssertEqual(result, "Error: Datos incorrectos", "Se esperaba un mensaje de error 'Error: Datos incorrectos'")
+    }
+    
+    
     func testLoginAutoLoginAsincrono() throws {
         var suscriptor = Set<AnyCancellable>()
         let exp = self.expectation(description: "Login Auto")
@@ -114,7 +145,7 @@ final class LoginAndKeychainTests: XCTestCase {
         
         viewModel.validateControlLogin()
         self.waitForExpectations(timeout: 10)
-
+        
     }
     
     func testUILoginView() throws {

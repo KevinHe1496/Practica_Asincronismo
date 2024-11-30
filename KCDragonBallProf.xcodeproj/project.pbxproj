@@ -52,6 +52,8 @@
 		C97B7A1B2CF524F60025FA33 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C97B7A1A2CF524F60025FA33 /* CombineCocoa */; };
 		C97B7A222CF539810025FA33 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97B7A212CF539810025FA33 /* ErrorViewController.xib */; };
 		C97B7A232CF539810025FA33 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A202CF539810025FA33 /* ErrorViewController.swift */; };
+		C99810CC2CFBB22300C7642D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99810CA2CFBB22300C7642D /* SplashViewController.swift */; };
+		C99810CD2CFBB22300C7642D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99810CB2CFBB22300C7642D /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		C97B7A122CF510F40025FA33 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		C97B7A202CF539810025FA33 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		C97B7A212CF539810025FA33 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		C99810CA2CFBB22300C7642D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C99810CB2CFBB22300C7642D /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -328,6 +332,7 @@
 				C96A91972CEE9D58001F03DB /* Home */,
 				C96A91962CEE9D4E001F03DB /* Login */,
 				C96E3DEB2CF695800098898B /* UIImage+Extensions.swift */,
+				C99810CF2CFBB22F00C7642D /* Splash */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +389,15 @@
 			children = (
 			);
 			path = PreviewContent;
+			sourceTree = "<group>";
+		};
+		C99810CF2CFBB22F00C7642D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C99810CA2CFBB22300C7642D /* SplashViewController.swift */,
+				C99810CB2CFBB22300C7642D /* SplashViewController.xib */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +503,7 @@
 				C96E3DE52CF68D230098898B /* HeroesListViewController.xib in Resources */,
 				C96E3DEA2CF693B10098898B /* HeroViewCell.xib in Resources */,
 				C935F54D2CF915B2007BF57C /* TransformationsViewCell.xib in Resources */,
+				C99810CD2CFBB22300C7642D /* SplashViewController.xib in Resources */,
 				C96E3DCF2CF658570098898B /* Localizable.strings in Resources */,
 				C96A91832CEE9BB4001F03DB /* LaunchScreen.storyboard in Resources */,
 				C97B7A222CF539810025FA33 /* ErrorViewController.xib in Resources */,
@@ -542,6 +557,7 @@
 				C935F5462CF9094D007BF57C /* TransformationsViewModel.swift in Sources */,
 				C97B7A232CF539810025FA33 /* ErrorViewController.swift in Sources */,
 				C935F51D2CF8FF94007BF57C /* TransformationsViewController.swift in Sources */,
+				C99810CC2CFBB22300C7642D /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

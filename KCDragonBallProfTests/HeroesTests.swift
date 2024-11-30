@@ -14,6 +14,8 @@ import UIKit
 
 final class HeroesTests: XCTestCase {
     
+    let keyChain = KeychainSwift()
+    var suscriptions = Set<AnyCancellable>()
     
     override func setUpWithError() throws {
         
@@ -121,4 +123,18 @@ final class HeroesTests: XCTestCase {
         let view = await HeroesListViewController(appState: AppState(loginUseCase: LoginUseCaseFake()), viewModel: viewModel)
         XCTAssertNotNil(view)
     }
+    
+    func testLoadHeroesError() async {
+        // Given
+        let viewModel = HeroesViewModel(usecaseHeroes: HeroesUseCaseFakeError(repo: HeroesRepositoryFake()))
+        XCTAssertNotNil(viewModel)
+        
+        // When
+        let heroes = viewModel.herosData
+        
+        // Then
+        XCTAssertTrue(heroes.isEmpty, "Se esperaba que la lista de héroes estuviera vacía.")
+    }
+
+
 }

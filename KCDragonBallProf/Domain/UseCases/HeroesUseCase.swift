@@ -4,7 +4,7 @@ import Foundation
 
 protocol HeroesUseCaseProtocol {
     var repo: HeroesRepositoryProtocol { get set }
-    func getHeroes(filter: String) async -> [HeroesModel]
+    func getHeroes(filter: String) async  -> [HeroesModel]
 }
 
 final class HeroesUseCase: HeroesUseCaseProtocol {
