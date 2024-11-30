@@ -20,7 +20,6 @@
 		C935F54C2CF915B2007BF57C /* TransformationsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935F54A2CF915B2007BF57C /* TransformationsViewCell.swift */; };
 		C935F54D2CF915B2007BF57C /* TransformationsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C935F54B2CF915B2007BF57C /* TransformationsViewCell.xib */; };
 		C96A91812CEE9BB4001F03DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96A91782CEE9BB4001F03DB /* Assets.xcassets */; };
-		C96A91832CEE9BB4001F03DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A917B2CEE9BB4001F03DB /* LaunchScreen.storyboard */; };
 		C96A91852CEE9BB4001F03DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A91772CEE9BB4001F03DB /* AppDelegate.swift */; };
 		C96A91862CEE9BB4001F03DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A917E2CEE9BB4001F03DB /* SceneDelegate.swift */; };
 		C96E3DCE2CF658570098898B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C96E3DCC2CF658570098898B /* Localizable.strings */; };
@@ -52,8 +51,11 @@
 		C97B7A1B2CF524F60025FA33 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C97B7A1A2CF524F60025FA33 /* CombineCocoa */; };
 		C97B7A222CF539810025FA33 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97B7A212CF539810025FA33 /* ErrorViewController.xib */; };
 		C97B7A232CF539810025FA33 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7A202CF539810025FA33 /* ErrorViewController.swift */; };
-		C99810CC2CFBB22300C7642D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99810CA2CFBB22300C7642D /* SplashViewController.swift */; };
-		C99810CD2CFBB22300C7642D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99810CB2CFBB22300C7642D /* SplashViewController.xib */; };
+		C99811452CFBB52900C7642D /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99811442CFBB52900C7642D /* Binding.swift */; };
+		C99811472CFBB59F00C7642D /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99811462CFBB59F00C7642D /* SplashViewModel.swift */; };
+		C998114A2CFBB63E00C7642D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99811482CFBB63E00C7642D /* SplashViewController.swift */; };
+		C998114B2CFBB63E00C7642D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99811492CFBB63E00C7642D /* SplashViewController.xib */; };
+		C998114D2CFBBA9400C7642D /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C998114C2CFBBA9400C7642D /* SplashBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,10 +86,8 @@
 		C96A91772CEE9BB4001F03DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96A91782CEE9BB4001F03DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96A91792CEE9BB4001F03DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C96A917A2CEE9BB4001F03DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C96A917E2CEE9BB4001F03DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C96E3DCD2CF658570098898B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C96E3DD02CF658B60098898B /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C96E3DD12CF658C20098898B /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C96E3DD42CF66DDB0098898B /* HeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesModel.swift; sourceTree = "<group>"; };
 		C96E3DD62CF66FA40098898B /* HeroesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -114,8 +114,11 @@
 		C97B7A122CF510F40025FA33 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		C97B7A202CF539810025FA33 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		C97B7A212CF539810025FA33 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
-		C99810CA2CFBB22300C7642D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		C99810CB2CFBB22300C7642D /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		C99811442CFBB52900C7642D /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		C99811462CFBB59F00C7642D /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		C99811482CFBB63E00C7642D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C99811492CFBB63E00C7642D /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		C998114C2CFBBA9400C7642D /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -204,7 +207,6 @@
 				C96A91772CEE9BB4001F03DB /* AppDelegate.swift */,
 				C96A91782CEE9BB4001F03DB /* Assets.xcassets */,
 				C96A91792CEE9BB4001F03DB /* Info.plist */,
-				C96A917B2CEE9BB4001F03DB /* LaunchScreen.storyboard */,
 				C96A917E2CEE9BB4001F03DB /* SceneDelegate.swift */,
 			);
 			path = KCDragonBallProf;
@@ -333,6 +335,7 @@
 				C96A91962CEE9D4E001F03DB /* Login */,
 				C96E3DEB2CF695800098898B /* UIImage+Extensions.swift */,
 				C99810CF2CFBB22F00C7642D /* Splash */,
+				C99811442CFBB52900C7642D /* Binding.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -394,8 +397,10 @@
 		C99810CF2CFBB22F00C7642D /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				C99810CA2CFBB22300C7642D /* SplashViewController.swift */,
-				C99810CB2CFBB22300C7642D /* SplashViewController.xib */,
+				C99811462CFBB59F00C7642D /* SplashViewModel.swift */,
+				C99811482CFBB63E00C7642D /* SplashViewController.swift */,
+				C99811492CFBB63E00C7642D /* SplashViewController.xib */,
+				C998114C2CFBBA9400C7642D /* SplashBuilder.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -503,9 +508,8 @@
 				C96E3DE52CF68D230098898B /* HeroesListViewController.xib in Resources */,
 				C96E3DEA2CF693B10098898B /* HeroViewCell.xib in Resources */,
 				C935F54D2CF915B2007BF57C /* TransformationsViewCell.xib in Resources */,
-				C99810CD2CFBB22300C7642D /* SplashViewController.xib in Resources */,
+				C998114B2CFBB63E00C7642D /* SplashViewController.xib in Resources */,
 				C96E3DCF2CF658570098898B /* Localizable.strings in Resources */,
-				C96A91832CEE9BB4001F03DB /* LaunchScreen.storyboard in Resources */,
 				C97B7A222CF539810025FA33 /* ErrorViewController.xib in Resources */,
 				C97B79FA2CF500940025FA33 /* LoginViewController.xib in Resources */,
 			);
@@ -529,6 +533,7 @@
 				C935F5402CF906FE007BF57C /* TransformationsRepositoryProtocol.swift in Sources */,
 				C97B7A0E2CF50A960025FA33 /* NetworkLogin.swift in Sources */,
 				C935F54C2CF915B2007BF57C /* TransformationsViewCell.swift in Sources */,
+				C998114A2CFBB63E00C7642D /* SplashViewController.swift in Sources */,
 				C96E3DDF2CF679B60098898B /* HeroesUseCase.swift in Sources */,
 				C97B7A092CF5096E0025FA33 /* HTTPMethods.swift in Sources */,
 				C96E3DE92CF693B10098898B /* HeroViewCell.swift in Sources */,
@@ -537,6 +542,7 @@
 				C96E3DD72CF66FA40098898B /* HeroesRepositoryProtocol.swift in Sources */,
 				C96E3DD52CF66DDB0098898B /* HeroesModel.swift in Sources */,
 				C97B7A132CF510F40025FA33 /* LoginRepository.swift in Sources */,
+				C99811472CFBB59F00C7642D /* SplashViewModel.swift in Sources */,
 				C97B79FB2CF500940025FA33 /* LoginViewController.swift in Sources */,
 				C97B7A072CF509360025FA33 /* HTTPReponseCodes.swift in Sources */,
 				C96E3DDD2CF678430098898B /* HeroesRepository.swift in Sources */,
@@ -551,13 +557,14 @@
 				C97B79FD2CF507550025FA33 /* AppState.swift in Sources */,
 				C97B79FF2CF507C50025FA33 /* LoginUseCase.swift in Sources */,
 				C96E3DE42CF68D230098898B /* HeroesListViewController.swift in Sources */,
+				C99811452CFBB52900C7642D /* Binding.swift in Sources */,
 				C97B7A052CF508F50025FA33 /* EndPoints.swift in Sources */,
 				C935F5222CF9013B007BF57C /* TransformationModel.swift in Sources */,
 				C97B7A012CF507E70025FA33 /* LoginRepositoryProtocol.swift in Sources */,
 				C935F5462CF9094D007BF57C /* TransformationsViewModel.swift in Sources */,
 				C97B7A232CF539810025FA33 /* ErrorViewController.swift in Sources */,
+				C998114D2CFBBA9400C7642D /* SplashBuilder.swift in Sources */,
 				C935F51D2CF8FF94007BF57C /* TransformationsViewController.swift in Sources */,
-				C99810CC2CFBB22300C7642D /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,15 +586,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C96A917B2CEE9BB4001F03DB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C96A917A2CEE9BB4001F03DB /* Base */,
-				C96E3DD02CF658B60098898B /* es-419 */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		C96E3DCC2CF658570098898B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

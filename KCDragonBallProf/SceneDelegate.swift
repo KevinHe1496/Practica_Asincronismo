@@ -19,15 +19,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
-
+        self.window?.rootViewController = SplashBuilder().build()
+        self.window?.makeKeyAndVisible()
         
-        appState.validateControlLogin()
+        
+        appState.statusLogin = .loading
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            self.appState.validateControlLogin()
+        }
+        
         var navigationController: UINavigationController?
         
         self.cancellable = appState.$statusLogin
             .sink(receiveValue: { state in
                 switch state {
                
+                case .loading:
+                    break
                 case .none:
                     DispatchQueue.main.async {
                         
@@ -58,6 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         self.window!.rootViewController = navigationController
                         self.window!.makeKeyAndVisible()
                     }
+                
                 }
             })
     }

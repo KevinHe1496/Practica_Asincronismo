@@ -9,6 +9,8 @@ import Foundation
 
 
 enum LoginState {
+    
+    case loading
     case none
     case success
     case error
@@ -17,7 +19,7 @@ enum LoginState {
 
 final class AppState {
     
-    @Published var statusLogin: LoginState = .none
+    @Published var statusLogin: LoginState = .loading
     private var loginUseCase: LoginUseCaseProtocol
     
     
