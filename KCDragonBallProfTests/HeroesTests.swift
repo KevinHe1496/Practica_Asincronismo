@@ -136,5 +136,14 @@ final class HeroesTests: XCTestCase {
         XCTAssertTrue(heroes.isEmpty, "Se esperaba que la lista de héroes estuviera vacía.")
     }
 
+    func testGetHeroFromJson() async {
+        
+        let fakeNetwork = NetworkHeroesFake()
+        let transformations = await fakeNetwork.getHeroes(filter: "Krilin")
+            
+            XCTAssertFalse(transformations.isEmpty, "La lista de transformaciones debería contener datos")
+            XCTAssertEqual(transformations.first?.name, "Maestro Roshi")
+        XCTAssertEqual(transformations.first?.description, "Es un maestro de artes marciales que tiene una escuela, donde entrenará a Goku y Krilin para los Torneos de Artes Marciales. Aún en los primeros episodios había un toque de tradición y disciplina, muy bien representada por el maestro. Pero Muten Roshi es un anciano extremadamente pervertido con las chicas jóvenes, una actitud que se utilizaba en escenas divertidas en los años 80. En su faceta de experto en artes marciales, fue quien le enseñó a Goku técnicas como el Kame Hame Ha")
+        }
 
 }

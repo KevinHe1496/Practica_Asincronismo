@@ -148,6 +148,16 @@ final class TransformationsTests: XCTestCase {
         // Then
         XCTAssertTrue(transformations.isEmpty, "Se esperaba que la lista de transformaciones estuviera vacía.")
     }
+    
+    func testGetTransformationFromJson() async {
+        
+            let fakeNetwork = NetworkTransformationsFake()
+            let transformations = await fakeNetwork.getTransformation(id: "testID")
+            
+            XCTAssertFalse(transformations.isEmpty, "La lista de transformaciones debería contener datos")
+            XCTAssertEqual(transformations.first?.name, "4. Gorilin")
+        XCTAssertEqual(transformations.first?.description, "Es la fusión de  Krillin y Kid Goku que apareció por primera vez en Dragon Ball Fusions.")
+        }
 
     
 }
