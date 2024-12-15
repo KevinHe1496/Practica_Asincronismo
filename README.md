@@ -2,6 +2,8 @@
 
 Dragon Ball App es una aplicación desarrollada en Swift, diseñada para mostrar a los personajes de Dragon Ball Z junto con sus descripciones. El proyecto combina XIBs para la interfaz de usuario y UITableViewControllers para presentar la información de manera organizada. También integra una API REST para obtener los datos de los personajes, se implementó un sistema de Login para la autenticación de usuarios, y se han incluido Unit Testing para garantizar la calidad del código.
 
+![Final](https://i.postimg.cc/VsXs8SMz/Final.png)
+
 ## Características
 
 - **XIBs**: La interfaz de usuario está diseñada utilizando una combinación de XIBs para facilitar el manejo visual de las vistas.
